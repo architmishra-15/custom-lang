@@ -1,0 +1,58 @@
+// Test basic printing
+dikha_bhai "Hello, duniya!";
+
+// Test function declaration and numbers
+dekh jod(x: int, y: int) {
+    wapas_kro x + y;
+}
+
+// Test null/khali values
+dekh khali_test() {
+    var x = khali;
+    dikha_bhai "x is khali";
+    wapas_kro x;
+}
+
+// Test boolean operations
+dekh bool_test(a: bool, b: bool) {
+    var result1 = a aur b;    // AND operation
+    var result2 = a ya b;     // OR operation
+    dikha_bhai result1;
+    dikha_bhai result2;
+}
+
+// Test string operations
+dekh string_test() {
+    var name = "Ravi";
+    dikha_bhai "Hello " + name;
+}
+
+// Test memory management with objects
+dekh memory_test() {
+    var arr = [1, 2, 3, 4, 5];  // This should be garbage collected when out of scope
+    dikha_bhai arr;
+}
+
+// Main function to run all tests
+dekh main() {
+    // Test basic arithmetic
+    var sum = jod(5, 3);
+    dikha_bhai "Sum is: ";
+    dikha_bhai sum;
+
+    // Test khali
+    khali_test();
+
+    // Test booleans
+    bool_test(true, false);
+
+    // Test strings
+    string_test();
+
+    // Test memory management
+    memory_test();
+
+    // Test garbage collection
+    var x = "This will be collected";
+    x = khali;  // Original string should be garbage collected
+}
